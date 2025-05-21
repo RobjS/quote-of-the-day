@@ -29,7 +29,7 @@ describe(\Quotations\Quotations::class, function () {
 
 	describe('->output()', function () {
 		it('outputs a single quote', function () {
-			for($i=0; $i<5; $i++) {
+			for ($i = 0; $i < 5; $i++) {
 				$output = $this->quotations->output();
 				$output = str_replace('<blockquote>', '', $output);
 				$output = str_replace('</blockquote>', '', $output);
