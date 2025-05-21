@@ -11,17 +11,17 @@ class Quotations implements \Dxw\Iguana\Registerable
 		'I wandered lonely as a cloud.'
 	];
 
-	public function register()
+	public function register(): void
 	{
 		add_action('init', [$this, 'addShortcode']);
 	}
 
-	public function addShortcode()
+	public function addShortcode(): void
 	{
 		add_shortcode('quote-of-the-day', [$this, 'output']);
 	}
 
-	public function output()
+	public function output(): string
 	{
 		$key = array_rand(self::QUOTES);
 		$quote = self::QUOTES[$key];
