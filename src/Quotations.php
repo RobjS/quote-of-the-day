@@ -13,7 +13,7 @@ class Quotations implements \Dxw\Iguana\Registerable
 
 	public function register(): void
 	{
-		add_action('init', [$this, 'addShortcode']);
+		add_action('init', [$this, 'addShortcode'], 10, 0);
 	}
 
 	public function addShortcode(): void
